@@ -5,6 +5,9 @@ import PWABadge from './PWABadge.tsx'
 import './App.css'
 
 function App() {
+  const url = import.meta.env.VITE_SUPABASE_URL;
+  const anon = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
   const [count, setCount] = useState(0)
 
   return (
@@ -23,7 +26,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          anon and url : {anon} {url}
         </p>
       </div>
       <p className="read-the-docs">
